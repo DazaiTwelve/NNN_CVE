@@ -1,0 +1,14 @@
+host,port,severity,title,description,remediation,source,cve_ids
+45.33.32.156,80,Critical,"Web Vulnerability: /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute fo","Method: GET, URI: /index
+/index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. The following alternatives for 'index' were found: index.ht",Restrict directory listings. Remove sensitive files from web root.,Nikto,"CVE-1999-0521,CVE-1999-0095,CVE-1999-0071,CVE-1999-0236"
+45.33.32.156,80,Medium,Open Port: HTTP,Port 80/tcp is open and running http,Review if http service on port 80 is necessary. Ensure it's properly configured and patched.,Nmap,"CVE-1999-1209,CVE-1999-0322,CVE-1999-0267,CVE-1999-0189,CVE-1999-1075"
+45.33.32.156,80,Medium,Web Vulnerability: /: The anti-clickjacking X-Frame-Options header is not present.,"Method: GET, URI: /
+/: The anti-clickjacking X-Frame-Options header is not present.","Configure HTTP security headers (X-Frame-Options, CSP, etc)",Nikto,CVE-1999-1220
+45.33.32.156,80,Medium,Web Vulnerability: /: The X-Content-Type-Options header is not set. This could allow the user agent to render the conte,"Method: GET, URI: /
+/: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.","Configure HTTP security headers (X-Frame-Options, CSP, etc)",Nikto,
+45.33.32.156,80,Medium,"Web Vulnerability: /index: Uncommon header 'tcn' found, with contents: list.","Method: GET, URI: /index
+/index: Uncommon header 'tcn' found, with contents: list.","Configure HTTP security headers (X-Frame-Options, CSP, etc)",Nikto,"CVE-1999-0045,CVE-1999-0070,CVE-1999-0059,CVE-1999-1220,CVE-1999-0170"
+45.33.32.156,80,Low,Web Vulnerability: Apache/2.4.7 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2,"Method: HEAD, URI: /
+Apache/2.4.7 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2.x branch.",Review and remediate per OWASP guidelines,Nikto,"CVE-1999-0071,CVE-1999-0236,CVE-1999-0107"
+45.33.32.156,80,Low,"Web Vulnerability: OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .","Method: OPTIONS, URI: /
+OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",Review and remediate per OWASP guidelines,Nikto,"CVE-1999-0298,CVE-1999-1572"

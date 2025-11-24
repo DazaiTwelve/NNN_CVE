@@ -1,0 +1,364 @@
+[
+  {
+    "id": "nikto-999965-45.33.32.156",
+    "source": "Nikto",
+    "title": "Web Vulnerability: /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute fo",
+    "severity": "Critical",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "http",
+    "description": "Method: GET, URI: /index\n/index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. The following alternatives for 'index' were found: index.html.",
+    "remediation": "Restrict directory listings. Remove sensitive files from web root.",
+    "cve_ids": [
+      "CVE-1999-0521",
+      "CVE-1999-0095",
+      "CVE-1999-0071",
+      "CVE-1999-0236"
+    ],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-0521",
+        "description": "An NIS domain name is easily guessable.",
+        "similarity_score": 0.3104382474684772,
+        "severity": "UNKNOWN",
+        "published": "1997-01-01T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0095",
+        "description": "The debug command in Sendmail is enabled, allowing attackers to execute commands as root.",
+        "similarity_score": 0.2330832385359821,
+        "severity": "UNKNOWN",
+        "published": "1988-10-01T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0071",
+        "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+        "similarity_score": 0.21645829832641736,
+        "severity": "UNKNOWN",
+        "published": "1997-09-01T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0236",
+        "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+        "similarity_score": 0.2139293351129449,
+        "severity": "UNKNOWN",
+        "published": "1997-01-01T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0012",
+        "description": "Some web servers under Microsoft Windows allow remote attackers to bypass access restrictions for files with long file names.",
+        "similarity_score": 0.19695239167366763,
+        "severity": "UNKNOWN",
+        "published": "1998-02-06T05:00:00.000"
+      }
+    ]
+  },
+  {
+    "id": "nmap-service-45.33.32.156-80",
+    "source": "Nmap",
+    "title": "Open Port: HTTP",
+    "severity": "Medium",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "tcp",
+    "description": "Port 80/tcp is open and running http",
+    "remediation": "Review if http service on port 80 is necessary. Ensure it's properly configured and patched.",
+    "cve_ids": [
+      "CVE-1999-1209",
+      "CVE-1999-0322",
+      "CVE-1999-0267",
+      "CVE-1999-0189",
+      "CVE-1999-1075"
+    ],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-1209",
+        "description": "Vulnerability in scoterm in SCO OpenServer 5.0 and SCO Open Desktop/Open Server 3.0 allows local users to gain root privileges.",
+        "similarity_score": 0.35569189434941445,
+        "severity": "UNKNOWN",
+        "published": "1997-11-20T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0322",
+        "description": "The open() function in FreeBSD allows local attackers to write to arbitrary files.",
+        "similarity_score": 0.3042060235614901,
+        "severity": "UNKNOWN",
+        "published": "1997-10-29T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0267",
+        "description": "Buffer overflow in NCSA HTTP daemon v1.3 allows remote command execution.",
+        "similarity_score": 0.2567206996129465,
+        "severity": "UNKNOWN",
+        "published": "1997-09-23T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0189",
+        "description": "Solaris rpcbind listens on a high numbered UDP port, which may not be filtered since the standard port number is 111.",
+        "similarity_score": 0.22836574495763498,
+        "severity": "UNKNOWN",
+        "published": "1997-06-04T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1075",
+        "description": "inetd in AIX 4.1.5 dynamically assigns a port N when starting ttdbserver (ToolTalk server), but also inadvertently listens on port N-1 without passing control to ttdbserver, which allows remote attackers to cause a denial of service via a large number of connections to port N-1, which are not proper",
+        "similarity_score": 0.22382913348868996,
+        "severity": "UNKNOWN",
+        "published": "1998-03-18T05:00:00.000"
+      }
+    ]
+  },
+  {
+    "id": "nikto-999957-45.33.32.156",
+    "source": "Nikto",
+    "title": "Web Vulnerability: /: The anti-clickjacking X-Frame-Options header is not present.",
+    "severity": "Medium",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "http",
+    "description": "Method: GET, URI: /\n/: The anti-clickjacking X-Frame-Options header is not present.",
+    "remediation": "Configure HTTP security headers (X-Frame-Options, CSP, etc)",
+    "cve_ids": [
+      "CVE-1999-1220"
+    ],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-1220",
+        "description": "Majordomo 1.94.3 and earlier allows remote attackers to execute arbitrary commands when the advertise or noadvertise directive is used in a configuration file, via shell metacharacters in the Reply-To header.",
+        "similarity_score": 0.2209651706351133,
+        "severity": "UNKNOWN",
+        "published": "1997-08-24T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0298",
+        "description": "ypbind with -ypset and -ypsetme options activated in Linux Slackware and SunOS allows local and remote attackers to overwrite files via a .. (dot dot) attack.",
+        "similarity_score": 0.19267531674011518,
+        "severity": "UNKNOWN",
+        "published": "1997-02-05T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1572",
+        "description": "cpio on FreeBSD 2.1.0, Debian GNU/Linux 3.0, and possibly other operating systems, uses a 0 umask when creating files using the -O (archive) or -F options, which creates the files with mode 0666 and allows local users to read or overwrite those files.",
+        "similarity_score": 0.15971523488170394,
+        "severity": "UNKNOWN",
+        "published": "1996-07-16T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0175",
+        "description": "The convert.bas program in the Novell web server allows a remote attackers to read any file on the system that is internally accessible by the web server.",
+        "similarity_score": 0.103209525103834,
+        "severity": "UNKNOWN",
+        "published": "1996-07-01T04:00:00.000"
+      }
+    ]
+  },
+  {
+    "id": "nikto-999103-45.33.32.156",
+    "source": "Nikto",
+    "title": "Web Vulnerability: /: The X-Content-Type-Options header is not set. This could allow the user agent to render the conte",
+    "severity": "Medium",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "http",
+    "description": "Method: GET, URI: /\n/: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.",
+    "remediation": "Configure HTTP security headers (X-Frame-Options, CSP, etc)",
+    "cve_ids": [],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-0537",
+        "description": "A configuration in a web browser such as Internet Explorer or Netscape Navigator allows execution of active content such as ActiveX, Java, Javascript, etc.",
+        "similarity_score": 0.18461591967167257,
+        "severity": "UNKNOWN",
+        "published": "1998-04-01T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0013",
+        "description": "Stolen credentials from SSH clients via ssh-agent program, allowing other local users to access remote accounts belonging to the ssh-agent user.",
+        "similarity_score": 0.15273244593615173,
+        "severity": "UNKNOWN",
+        "published": "1998-01-22T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1183",
+        "description": "System Manager sysmgr GUI in SGI IRIX 6.4 and 6.3 allows remote attackers to execute commands by providing a trojan horse (1) runtask or (2) runexec descriptor file, which is used to execute a System Manager Task when the user's Mailcap entry supports the x-sgi-task or x-sgi-exec type.",
+        "similarity_score": 0.11501701263247649,
+        "severity": "UNKNOWN",
+        "published": "1998-04-02T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1193",
+        "description": "The \"me\" user in NeXT NeXTstep 2.1 and earlier has wheel group privileges, which could allow the me user to use the su command to become root.",
+        "similarity_score": 0.10530809351357368,
+        "severity": "UNKNOWN",
+        "published": "1991-05-14T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1220",
+        "description": "Majordomo 1.94.3 and earlier allows remote attackers to execute arbitrary commands when the advertise or noadvertise directive is used in a configuration file, via shell metacharacters in the Reply-To header.",
+        "similarity_score": 0.10432119460524152,
+        "severity": "UNKNOWN",
+        "published": "1997-08-24T04:00:00.000"
+      }
+    ]
+  },
+  {
+    "id": "nikto-999100-45.33.32.156",
+    "source": "Nikto",
+    "title": "Web Vulnerability: /index: Uncommon header 'tcn' found, with contents: list.",
+    "severity": "Medium",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "http",
+    "description": "Method: GET, URI: /index\n/index: Uncommon header 'tcn' found, with contents: list.",
+    "remediation": "Configure HTTP security headers (X-Frame-Options, CSP, etc)",
+    "cve_ids": [
+      "CVE-1999-0045",
+      "CVE-1999-0070",
+      "CVE-1999-0059",
+      "CVE-1999-1220",
+      "CVE-1999-0170"
+    ],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-0045",
+        "description": "List of arbitrary files on Web host via nph-test-cgi script.",
+        "similarity_score": 0.28930155130399804,
+        "severity": "UNKNOWN",
+        "published": "1996-12-10T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0070",
+        "description": "test-cgi program allows an attacker to list files on the server.",
+        "similarity_score": 0.274134353578678,
+        "severity": "UNKNOWN",
+        "published": "1996-04-01T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0059",
+        "description": "IRIX fam service allows an attacker to obtain a list of all files on the server.",
+        "similarity_score": 0.24924161974727158,
+        "severity": "UNKNOWN",
+        "published": "1997-07-14T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1220",
+        "description": "Majordomo 1.94.3 and earlier allows remote attackers to execute arbitrary commands when the advertise or noadvertise directive is used in a configuration file, via shell metacharacters in the Reply-To header.",
+        "similarity_score": 0.23646220899828863,
+        "severity": "UNKNOWN",
+        "published": "1997-08-24T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0170",
+        "description": "Remote attackers can mount an NFS file system in Ultrix or OSF, even if it is denied on the access list.",
+        "similarity_score": 0.20844084341229374,
+        "severity": "UNKNOWN",
+        "published": "1997-01-01T05:00:00.000"
+      }
+    ]
+  },
+  {
+    "id": "nikto-600050-45.33.32.156",
+    "source": "Nikto",
+    "title": "Web Vulnerability: Apache/2.4.7 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2",
+    "severity": "Low",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "http",
+    "description": "Method: HEAD, URI: /\nApache/2.4.7 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2.x branch.",
+    "remediation": "Review and remediate per OWASP guidelines",
+    "cve_ids": [
+      "CVE-1999-0071",
+      "CVE-1999-0236",
+      "CVE-1999-0107"
+    ],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-0071",
+        "description": "Apache httpd cookie buffer overflow for versions 1.1.1 and earlier.",
+        "similarity_score": 0.3964222665448043,
+        "severity": "UNKNOWN",
+        "published": "1997-09-01T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0236",
+        "description": "ScriptAlias directory in NCSA and Apache httpd allowed attackers to read CGI programs.",
+        "similarity_score": 0.3223626064510033,
+        "severity": "UNKNOWN",
+        "published": "1997-01-01T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0107",
+        "description": "Buffer overflow in Apache 1.2.5 and earlier allows a remote attacker to cause a denial of service with a large number of GET requests containing a large number of / characters.",
+        "similarity_score": 0.2539516816239507,
+        "severity": "UNKNOWN",
+        "published": "1997-12-30T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1318",
+        "description": "/usr/5bin/su in SunOS 4.1.3 and earlier uses a search path that includes the current working directory (.), which allows local users to gain privileges via Trojan horse programs.",
+        "similarity_score": 0.13359577164999709,
+        "severity": "UNKNOWN",
+        "published": "1993-09-17T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1217",
+        "description": "The PATH in Windows NT includes the current working directory (.), which could allow local users to gain privileges by placing Trojan horse programs with the same name as commonly used system programs into certain directories.",
+        "similarity_score": 0.12581627080968175,
+        "severity": "UNKNOWN",
+        "published": "1997-07-25T04:00:00.000"
+      }
+    ]
+  },
+  {
+    "id": "nikto-999990-45.33.32.156",
+    "source": "Nikto",
+    "title": "Web Vulnerability: OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+    "severity": "Low",
+    "host": "45.33.32.156",
+    "port": "80",
+    "protocol": "http",
+    "description": "Method: OPTIONS, URI: /\nOPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .",
+    "remediation": "Review and remediate per OWASP guidelines",
+    "cve_ids": [
+      "CVE-1999-0298",
+      "CVE-1999-1572"
+    ],
+    "cve_matches": [
+      {
+        "cve_id": "CVE-1999-0298",
+        "description": "ypbind with -ypset and -ypsetme options activated in Linux Slackware and SunOS allows local and remote attackers to overwrite files via a .. (dot dot) attack.",
+        "similarity_score": 0.2583075645923088,
+        "severity": "UNKNOWN",
+        "published": "1997-02-05T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1572",
+        "description": "cpio on FreeBSD 2.1.0, Debian GNU/Linux 3.0, and possibly other operating systems, uses a 0 umask when creating files using the -O (archive) or -F options, which creates the files with mode 0666 and allows local users to read or overwrite those files.",
+        "similarity_score": 0.21412007541281516,
+        "severity": "UNKNOWN",
+        "published": "1996-07-16T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0267",
+        "description": "Buffer overflow in NCSA HTTP daemon v1.3 allows remote command execution.",
+        "similarity_score": 0.15347937826511016,
+        "severity": "UNKNOWN",
+        "published": "1997-09-23T04:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-0525",
+        "description": "IP traceroute is allowed from arbitrary hosts.",
+        "similarity_score": 0.144529565995936,
+        "severity": "UNKNOWN",
+        "published": "1997-01-01T05:00:00.000"
+      },
+      {
+        "cve_id": "CVE-1999-1207",
+        "description": "Buffer overflow in web-admin tool in NetXRay 2.6 allows remote attackers to cause a denial of service, and possibly execute arbitrary commands, via a long HTTP request.",
+        "similarity_score": 0.14085136661516787,
+        "severity": "UNKNOWN",
+        "published": "1998-02-18T05:00:00.000"
+      }
+    ]
+  }
+]

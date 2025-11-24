@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscans SYSTEM "docs/nikto.dtd">
+<niktoscans>
+<niktoscan hoststest="0" options="-h http://testhtml5.vulnweb.com -Format xml -o scan_results/nikto_testhtml5.vulnweb.com_20251106_205215.xml -Tuning 1234567" version="2.5.0" scanstart="Thu Nov  6 20:52:16 2025" scanend="Thu Jan  1 05:30:00 1970" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="44.228.249.3" targethostname="testhtml5.vulnweb.com" targetport="80" targetbanner="nginx/1.19.0" starttime="2025-11-06 20:52:19" sitename="http://testhtml5.vulnweb.com:80/" siteip="http://44.228.249.3:80/" hostheader="testhtml5.vulnweb.com" errors="0" checks="3892">
+
+
+<item id="999986" method="GET">
+<description><![CDATA[/: Retrieved access-control-allow-origin header: *.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testhtml5.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<item id="999957" method="GET">
+<description><![CDATA[/: The anti-clickjacking X-Frame-Options header is not present.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testhtml5.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+<references><![CDATA[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options]]></references>
+</item>
+
+<item id="999103" method="GET">
+<description><![CDATA[/: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testhtml5.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+<references><![CDATA[https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/]]></references>
+</item>
+
+<item id="999990" method="OPTIONS">
+<description><![CDATA[OPTIONS: Allowed HTTP Methods: HEAD, OPTIONS, GET .]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testhtml5.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<statistics elapsed="306" itemsfound="4" itemstested="3892" endtime="2025-11-06 20:57:25" />
+</scandetails>
+</niktoscan>
+
+
+</niktoscans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NessusClientData>
+<Policy>
+<PolicyName>Basic Network Scan</PolicyName>
+<PolicyComments>Dummy Nessus scan report</PolicyComments>
+</Policy>
+<Report name="Penetration Test Report" timestamp="1667846400">
+<ReportHost name="192.168.1.1" os="Linux">
+<ReportItem port="22" svc_name="ssh" protocol="tcp" severity="2" pluginID="10662" pluginName="SSH Version Detection">
+<description>The remote host is running OpenSSH 7.4 which is outdated</description>
+<plugin_output>SSH version: OpenSSH 7.4</plugin_output>
+<cvss_vector>AV:N/AC:L/Au:N/C:P/I:P/A:P</cvss_vector>
+<cvss_base_score>7.5</cvss_base_score>
+</ReportItem>
+<ReportItem port="80" svc_name="http" protocol="tcp" severity="3" pluginID="45590" pluginName="SSL Certificate Expiration">
+<description>The SSL certificate on the remote host has expired</description>
+<plugin_output>Certificate expired on 2024-01-01</plugin_output>
+<cvss_vector>AV:N/AC:L/Au:N/C:P/I:P/A:N</cvss_vector>
+<cvss_base_score>6.4</cvss_base_score>
+</ReportItem>
+<ReportItem port="80" svc_name="http" protocol="tcp" severity="3" pluginID="58644" pluginName="Cross-site Scripting (XSS)">
+<description>Cross-site scripting vulnerability detected in parameter</description>
+<plugin_output>Parameter: id, Payload: <script>alert(1)</script></plugin_output>
+<cvss_vector>AV:N/AC:M/Au:N/C:P/I:P/A:N</cvss_vector>
+<cvss_base_score>6.4</cvss_base_score>
+</ReportItem>
+<ReportItem port="3306" svc_name="mysql" protocol="tcp" severity="4" pluginID="11011" pluginName="MySQL Default Credentials">
+<description>MySQL is running with default credentials</description>
+<plugin_output>root account without password</plugin_output>
+<cvss_vector>AV:N/AC:L/Au:N/C:C/I:C/A:C</cvss_vector>
+<cvss_base_score>9.8</cvss_base_score>
+</ReportItem>
+<ReportItem port="5432" svc_name="postgresql" protocol="tcp" severity="4" pluginID="15664" pluginName="PostgreSQL SQL Injection">
+<description>PostgreSQL is vulnerable to SQL injection</description>
+<plugin_output>Version: 9.6.0, Vulnerable parameter: search</plugin_output>
+<cvss_vector>AV:N/AC:L/Au:N/C:C/I:C/A:C</cvss_vector>
+<cvss_base_score>9.8</cvss_base_score>
+</ReportItem>
+<ReportItem port="80" svc_name="http" protocol="tcp" severity="2" pluginID="20007" pluginName="Directory Listing Enabled">
+<description>Directory listing is enabled on the web server</description>
+<plugin_output>Directories: /uploads, /admin, /config</plugin_output>
+<cvss_vector>AV:N/AC:L/Au:N/C:P/I:N/A:N</cvss_vector>
+<cvss_base_score>5.0</cvss_base_score>
+</ReportItem>
+<ReportItem port="0" svc_name="general" protocol="tcp" severity="1" pluginID="10330" pluginName="Host Information">
+<description>This is informational output for the host</description>
+<plugin_output>Hostname: router.local, OS: Linux 2.6.32</plugin_output>
+</ReportItem>
+</ReportHost>
+</Report>
+</NessusClientData>

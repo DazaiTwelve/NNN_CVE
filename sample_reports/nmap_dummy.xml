@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<nmaprun scanner="nmap" args="nmap -sV -p- 192.168.1.1" start="1667846535" startstr="Thu Nov  7 01:00:35 2025" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1667846540" endtime="1667846580">
+<status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="192.168.1.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="router.local" type="PTR"/>
+</hostnames>
+<ports>
+<port protocol="tcp" portid="22">
+<state state="open" reason="syn-ack" reason_ttl="0"/>
+<service name="ssh" product="OpenSSH" version="7.4" ostype="Linux" method="table" conf="10"/>
+</port>
+<port protocol="tcp" portid="80">
+<state state="open" reason="syn-ack" reason_ttl="0"/>
+<service name="http" product="Apache httpd" version="2.4.6" method="table" conf="10"/>
+</port>
+<port protocol="tcp" portid="443">
+<state state="open" reason="syn-ack" reason_ttl="0"/>
+<service name="https" product="Apache httpd" version="2.4.6" method="table" conf="10"/>
+</port>
+<port protocol="tcp" portid="3306">
+<state state="open" reason="syn-ack" reason_ttl="0"/>
+<service name="mysql" product="MySQL" version="5.7.0" method="table" conf="10"/>
+</port>
+<port protocol="tcp" portid="5432">
+<state state="open" reason="syn-ack" reason_ttl="0"/>
+<service name="postgresql" product="PostgreSQL" version="9.6" method="table" conf="10"/>
+</port>
+</ports>
+<os>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="95" line="69841">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X|3.X" accuracy="95">
+<cpe>cpe:/o:linux:linux_kernel:2</cpe>
+</osclass>
+</osmatch>
+</os>
+<times srtt="25432" rttvar="5432" to="100000"/>
+</host>
+<runstats>
+<finished time="1667846580" timestr="Thu Nov  7 01:30:58 2025" summary="Nmap done at Thu Nov  7 01:30:58 2025; 1 IP address (1 host up) scanned in 45.32 seconds" exit="success"/>
+<hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

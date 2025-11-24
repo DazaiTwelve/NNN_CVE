@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pentest_report>
+  <target>scanme.nmap.org</target>
+  <date>2025-11-06T21:44:55.218026</date>
+  <total_findings>7</total_findings>
+  <findings>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Critical</severity>
+      <title>Web Vulnerability: /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute fo</title>
+      <source>Nikto</source>
+      <cve>CVE-1999-0521</cve>
+      <cve>CVE-1999-0095</cve>
+      <cve>CVE-1999-0071</cve>
+      <cve>CVE-1999-0236</cve>
+    </finding>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Medium</severity>
+      <title>Open Port: HTTP</title>
+      <source>Nmap</source>
+      <cve>CVE-1999-1209</cve>
+      <cve>CVE-1999-0322</cve>
+      <cve>CVE-1999-0267</cve>
+      <cve>CVE-1999-0189</cve>
+      <cve>CVE-1999-1075</cve>
+    </finding>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Medium</severity>
+      <title>Web Vulnerability: /: The anti-clickjacking X-Frame-Options header is not present.</title>
+      <source>Nikto</source>
+      <cve>CVE-1999-1220</cve>
+    </finding>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Medium</severity>
+      <title>Web Vulnerability: /: The X-Content-Type-Options header is not set. This could allow the user agent to render the conte</title>
+      <source>Nikto</source>
+    </finding>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Medium</severity>
+      <title>Web Vulnerability: /index: Uncommon header 'tcn' found, with contents: list.</title>
+      <source>Nikto</source>
+      <cve>CVE-1999-0045</cve>
+      <cve>CVE-1999-0070</cve>
+      <cve>CVE-1999-0059</cve>
+      <cve>CVE-1999-1220</cve>
+      <cve>CVE-1999-0170</cve>
+    </finding>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Low</severity>
+      <title>Web Vulnerability: Apache/2.4.7 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2</title>
+      <source>Nikto</source>
+      <cve>CVE-1999-0071</cve>
+      <cve>CVE-1999-0236</cve>
+      <cve>CVE-1999-0107</cve>
+    </finding>
+    <finding>
+      <host>45.33.32.156</host>
+      <port>80</port>
+      <severity>Low</severity>
+      <title>Web Vulnerability: OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .</title>
+      <source>Nikto</source>
+      <cve>CVE-1999-0298</cve>
+      <cve>CVE-1999-1572</cve>
+    </finding>
+  </findings>
+</pentest_report>

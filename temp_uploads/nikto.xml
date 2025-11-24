@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE niktoscan>
+<niktoscan version="2.1.5">
+<meta name="scan_start" content="Wed Nov 07 01:00:00 2025"/>
+<meta name="scan_details" content="192.168.1.1:80"/>
+<web_server product="Apache" version="2.4.6" banner="Apache/2.4.6 (CentOS)"/>
+<sitefile name="index.php" status="200" method="GET">
+<item type="interesting_headers">
+<description>The anti-clickjacking X-Frame-Options header is not present</description>
+<uri>/</uri>
+<namelink>Clickjacking</namelink>
+</item>
+<item type="interesting_headers">
+<description>The X-Content-Type-Options header is not set</description>
+<uri>/</uri>
+<namelink>MIME Type Sniffing</namelink>
+</item>
+<item type="auth">
+<description>Default credentials found for admin panel</description>
+<uri>/admin</uri>
+<namelink>Default Credentials</namelink>
+</item>
+<item type="outdated_software">
+<description>Apache 2.4.6 is outdated (current is 2.4.57)</description>
+<uri>/</uri>
+<namelink>Outdated Apache</namelink>
+</item>
+<item type="injectable">
+<description>Possible SQL injection vulnerability in search parameter</description>
+<uri>/search.php?q=test</uri>
+<namelink>SQL Injection</namelink>
+</item>
+<item type="file_upload">
+<description>Unrestricted file upload found</description>
+<uri>/upload.php</uri>
+<namelink>File Upload</namelink>
+</item>
+</sitefile>
+<meta name="scan_end" content="Wed Nov 07 01:15:00 2025"/>
+</niktoscan>

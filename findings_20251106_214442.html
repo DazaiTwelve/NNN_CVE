@@ -1,0 +1,89 @@
+
+        <html>
+        <head>
+            <title>Penetration Test Report - scanme.nmap.org</title>
+            <style>
+                body { font-family: Arial; margin: 20px; }
+                .critical { color: red; }
+                .high { color: orange; }
+                .medium { color: goldenrod; }
+                table { border-collapse: collapse; width: 100%; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #4CAF50; color: white; }
+            </style>
+        </head>
+        <body>
+            <h1>Penetration Test Report</h1>
+            <p><strong>Target:</strong> scanme.nmap.org</p>
+            <p><strong>Date:</strong> 2025-11-06 21:44:42</p>
+            <p><strong>Total Findings:</strong> 7</p>
+            
+            <table>
+            <tr>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Severity</th>
+                <th>Title</th>
+                <th>CVEs</th>
+            </tr>
+        
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="critical">Critical</td>
+                <td>Web Vulnerability: /index: Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute fo</td>
+                <td>CVE-1999-0521, CVE-1999-0095, CVE-1999-0071, CVE-1999-0236</td>
+            </tr>
+            
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="medium">Medium</td>
+                <td>Open Port: HTTP</td>
+                <td>CVE-1999-1209, CVE-1999-0322, CVE-1999-0267, CVE-1999-0189, CVE-1999-1075</td>
+            </tr>
+            
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="medium">Medium</td>
+                <td>Web Vulnerability: /: The anti-clickjacking X-Frame-Options header is not present.</td>
+                <td>CVE-1999-1220</td>
+            </tr>
+            
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="medium">Medium</td>
+                <td>Web Vulnerability: /: The X-Content-Type-Options header is not set. This could allow the user agent to render the conte</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="medium">Medium</td>
+                <td>Web Vulnerability: /index: Uncommon header 'tcn' found, with contents: list.</td>
+                <td>CVE-1999-0045, CVE-1999-0070, CVE-1999-0059, CVE-1999-1220, CVE-1999-0170</td>
+            </tr>
+            
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="low">Low</td>
+                <td>Web Vulnerability: Apache/2.4.7 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2</td>
+                <td>CVE-1999-0071, CVE-1999-0236, CVE-1999-0107</td>
+            </tr>
+            
+            <tr>
+                <td>45.33.32.156</td>
+                <td>80</td>
+                <td class="low">Low</td>
+                <td>Web Vulnerability: OPTIONS: Allowed HTTP Methods: GET, HEAD, POST, OPTIONS .</td>
+                <td>CVE-1999-0298, CVE-1999-1572</td>
+            </tr>
+            
+            </table>
+        </body>
+        </html>
+        

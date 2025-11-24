@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscans SYSTEM "docs/nikto.dtd">
+<niktoscans>
+<niktoscan hoststest="0" options="-h 10.12.136.139 -p 80 -Format xml -o scan_results/nikto_10.12.136.139_20251106_171815.xml" version="2.5.0" scanstart="Thu Nov  6 17:18:15 2025" scanend="Thu Jan  1 05:30:00 1970" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="10.12.136.139" targethostname="10.12.136.139" targetport="80" targetbanner="Apache/2.4.63 (Fedora Linux)" starttime="2025-11-06 17:18:15" sitename="http://10.12.136.139:80/" siteip="http://10.12.136.139:80/" hostheader="10.12.136.139" errors="0" checks="4609">
+
+
+<item id="999957" method="GET">
+<description><![CDATA[/: The anti-clickjacking X-Frame-Options header is not present.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/]]></iplink>
+<references><![CDATA[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options]]></references>
+</item>
+
+<item id="999103" method="GET">
+<description><![CDATA[/: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/]]></iplink>
+<references><![CDATA[https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/]]></references>
+</item>
+
+<item id="999986" method="GET">
+<description><![CDATA[/eMKOrxxl.php: Retrieved x-powered-by header: PHP/8.3.19.]]></description>
+<uri><![CDATA[/eMKOrxxl.php]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/eMKOrxxl.php]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/eMKOrxxl.php]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<item id="999990" method="OPTIONS">
+<description><![CDATA[OPTIONS: Allowed HTTP Methods: OPTIONS, HEAD, GET, POST, TRACE .]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<item id="000434" method="TRACE">
+<description><![CDATA[/: HTTP TRACE method is active which suggests the host is vulnerable to XST.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/]]></iplink>
+<references><![CDATA[https://owasp.org/www-community/attacks/Cross_Site_Tracing]]></references>
+</item>
+
+<item id="750500" method="GET">
+<description><![CDATA[/icons/: Directory indexing found.]]></description>
+<uri><![CDATA[/icons/]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/icons/]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/icons/]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<item id="003584" method="GET">
+<description><![CDATA[/icons/README: Apache default file found.]]></description>
+<uri><![CDATA[/icons/README]]></uri>
+<namelink><![CDATA[http://10.12.136.139:80/icons/README]]></namelink>
+<iplink><![CDATA[http://10.12.136.139:80/icons/README]]></iplink>
+<references><![CDATA[https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/]]></references>
+</item>
+
+<statistics elapsed="4" itemsfound="7" itemstested="4609" endtime="2025-11-06 17:18:19" />
+</scandetails>
+</niktoscan>
+
+
+</niktoscans>

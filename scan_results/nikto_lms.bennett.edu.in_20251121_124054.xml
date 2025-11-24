@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscans SYSTEM "docs/nikto.dtd">
+<niktoscans>
+<niktoscan hoststest="0" options="-h http://lms.bennett.edu.in -Format xml -o scan_results/nikto_lms.bennett.edu.in_20251121_124054.xml -Tuning 1234567" version="2.5.0" scanstart="Fri Nov 21 12:40:55 2025" scanend="Thu Jan  1 05:30:00 1970" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="10.8.0.170" targethostname="lms.bennett.edu.in" targetport="80" targetbanner="Apache/2.4.52 (Ubuntu)" starttime="2025-11-21 12:40:55" sitename="http://lms.bennett.edu.in:80/" siteip="http://10.8.0.170:80/" hostheader="lms.bennett.edu.in" errors="0" checks="3892">
+
+
+<item id="999957" method="GET">
+<description><![CDATA[/: The anti-clickjacking X-Frame-Options header is not present.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://lms.bennett.edu.in:80/]]></namelink>
+<iplink><![CDATA[http://10.8.0.170:80/]]></iplink>
+<references><![CDATA[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options]]></references>
+</item>
+
+<item id="999100" method="GET">
+<description><![CDATA[/: Uncommon header 'x-redirect-by' found, with contents: Moodle.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://lms.bennett.edu.in:80/]]></namelink>
+<iplink><![CDATA[http://10.8.0.170:80/]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<item id="999103" method="GET">
+<description><![CDATA[/: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://lms.bennett.edu.in:80/]]></namelink>
+<iplink><![CDATA[http://10.8.0.170:80/]]></iplink>
+<references><![CDATA[https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/]]></references>
+</item>
+
+<item id="600050" method="HEAD">
+<description><![CDATA[Apache/2.4.52 appears to be outdated (current is at least 2.4.57). Apache 2.2.34 is the EOL for the 2.x branch.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://lms.bennett.edu.in:80/]]></namelink>
+<iplink><![CDATA[http://10.8.0.170:80/]]></iplink>
+<references><![CDATA[]]></references>
+</item>
+
+<statistics elapsed="138" itemsfound="4" itemstested="3892" endtime="2025-11-21 12:43:13" />
+</scandetails>
+</niktoscan>
+
+
+</niktoscans>
